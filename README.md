@@ -5,10 +5,10 @@ This project Next.js application that serves as the foundation for an AIrBnB clo
 ## Project structure
 
 The project has the following directories:
-    - **components/**: Contains reusable componentsused throughout the project.
-    - **interfaces/**: Contains TypeSCript definitions.
-    - **constants/**: Stores application-wide constants and configuration for example API URLs, configuration settings, and UI text.
-    - **public/assets**: Houses static assets used in the application for example images, SVGs, and other media resources.
+- **components/**: Contains reusable componentsused throughout the project.
+- **interfaces/**: Contains TypeSCript definitions.
+- **constants/**: Stores application-wide constants and configuration for example API URLs, configuration settings, and UI text.
+- **public/assets**: Houses static assets used in the application for example images, SVGs, and other media resources.
 
 ## Getting Started
 
