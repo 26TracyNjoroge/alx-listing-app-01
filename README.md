@@ -14,6 +14,21 @@ The project has the following directories:
 
 First, run the development server:
 
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd alx-listing-app
+
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Start the development server:
 ```bash
 npm run dev
 # or
