@@ -1,41 +1,58 @@
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const Header: React.FC = () => {
-    return (
-        <header className='flex'>
-           <form className='flex rounded-full border-solid border-purple-500' >
-            {/* <img src={} alt='Logo'/> */}
-                <div className='flex flex-1'>
-                    <div>
-                        <label>Location</label>
-                        <input placeholder="Search for destination" type="text" />
-                    </div>
-                    <div>
-                        <label>Check in</label>
-                        <input placeholder="Add date"/>
-                    </div>
-                    <div>
-                        <label>Check Out</label>
-                        <input placeholder="Add date" type="text"/>
-                    </div>
-                    <div>
-                        <label>People</label>
-                        <input placeholder="Add guest" type="text"/>
-                    </div>
-                </div>
-                <input type='search' value="Search"/>
-           </form>
-           <div className="flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-blue-600 transition-colors">
-              Sign In
-            </button>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-              Sign Up
-            </button>
-          </div>
+  const [query, setQuery] = useState("");
 
-        </header>
-    )
-}
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Searching for:", query);
+    // You could route, filter data, etc.
+  };
+  return (
+    <>
+      <div className="flex justify-between items-center bg-white text-black px-12 py-2">
+        <Image
+          src="/assets/images/Arrow-right.png"
+          alt="Banner"
+          width={40}
+          height={20}
+        />
+        <form onSubmit={handleSearch} className="flex gap-2">
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search..."
+            className="px-4 py-2 border rounded"
+          />
+          <button
+            type="submit"
+            className="px-4 py-2 bg-green-800 text-white rounded"
+          >
+            Search
+          </button>
+        </form>
+        <div className="flex gap-4">
+          <Link href="/SignUpPage">Sign Up</Link>
+          <Link href="/SignInPage">Sign In</Link>
+        </div>
+      </div>
+      <div className="bg-green-800 text-white px-4 py-2">
+        <div className="flex flex-col space-y-2 sm:flex-row sm:justify-between sm:space-y-0">
+            <Link href="/rooms">Rooms</Link>
+            <Link href="/mansion">Mansion</Link>
+            <Link href="/countryside">Countryside</Link>
+            <Link href="/beachfront">Beachfront</Link>
+            <Link href="/forest">Forest</Link>
+            <Link href="/mountains">Mountains</Link>
+            <Link href="/desert">Desert</Link>
+            <Link href="/islands">Islands</Link>
+        </div>
+     </div>
+    </>
+  );
+};
 
 export default Header;
