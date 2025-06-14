@@ -1,17 +1,21 @@
 import { ReactNode } from "react";
+
 export interface LayoutProps {
   children: ReactNode;
 }
+
 export interface CardProps {
   title: string;
   image: string;
   location: string;
   price: string;
 }
+
 export interface PillProps{
   title: string;
   image?: string;
 }
+
 export interface ButtonProps {
   text: string;
   onClick?: () => void;

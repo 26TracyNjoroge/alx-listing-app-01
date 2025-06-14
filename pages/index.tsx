@@ -5,15 +5,15 @@ import { PROPERTYLISTINGSAMPLE } from "@/constants";
 export default function index() {
   const pills = [
     "Top Villa",
-    "Self Checkin",
-    "Free Reschudle",
-    "Instant book",
+    "Free Reschedule",
     "Book Now, Pay Later",
+    "Self Checkin",
+    "Instant book",
   ];
   const propertyLinstings = PROPERTYLISTINGSAMPLE;
   return (
     <>
-      <section className="bg-[url('/assets/images/Image-1.png')] bg-cover bg-center rounded-xl text-center text-white py-20 px-4 mb-3">
+      <section className="bg-[url('/assets/images/Image-1.png')] bg-cover bg-center rounded-xl text-center text-white py-14 px-4 mb-3">
         <h1 className="text-6xl font-bold mb-4">
           Find your favorite place here!
         </h1>
@@ -26,7 +26,7 @@ export default function index() {
           <Pill key={index} title={pill} />
         ))}
       </section>
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-12 space-y-3 my-12">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 space-y-3 mt-5 mb-12">
         {propertyLinstings.map((property, index) => (
           <Card key={index} {...property} />
         ))}

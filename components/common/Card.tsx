@@ -12,7 +12,7 @@ const Card: React.FC<PropertyProps> = ({
   image,
 }) => {
   return (
-    <div className=" flex flex-col gap-4 bg-white text-black rounded-2xl p-4">
+    <div className=" flex flex-col gap-4 bg-gray-100 text-black rounded-2xl p-2">
       <div className="relative w-full h-64">
         <Image
           src={image}

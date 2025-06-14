@@ -12,9 +12,9 @@ const Header: React.FC = () => {
   };
   return (
     <>
-      <div className="flex justify-between items-center bg-white text-black px-12 py-2">
+      <div className="flex justify-between items-center bg-white text-black px-12 pb-2 pt-3">
         <Image
-          src="/assets/images/Arrow-right.png"
+          src="/assets/images/Vector.png"
           alt="Banner"
           width={40}
           height={20}
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           <Link href="/SignInPage">Sign In</Link>
         </div>
       </div>
-      <div className="bg-green-800 text-white px-4 py-2">
+      <div className="bg-green-800 text-white px-6 py-2 mt-1">
         <div className="flex flex-col space-y-2 sm:flex-row sm:justify-between sm:space-y-0">
             <Link href="/rooms">Rooms</Link>
             <Link href="/mansion">Mansion</Link>
