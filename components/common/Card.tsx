@@ -23,8 +23,8 @@ const Card: React.FC<PropertyProps> = ({
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        {category.map((categoryElement, index) => (
-          <Pill key={index} title={categoryElement} />
+        {category.map((categoryEl, index) => (
+          <Pill key={index} title={categoryEl} />
         ))}
       </div>
 
